@@ -2323,22 +2323,13 @@ footer {
     gap: 10px;
   }
 
-  .header-top-actions select {
-    border: none;
-    display: block;
-    min-width: 80px;
-    padding: 5px 0;
-    font: inherit;
-    color: var(--sonic-silver);
-    font-size: var(--fs-8);
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-transition: var(--transition-timing);
-    -o-transition: var(--transition-timing);
-    transition: var(--transition-timing);
+  .header-top-actions a{
+    font-size: 1rem;
+    color: var(--spanish-gray);
   }
-
-  .header-top-actions select:hover { color: var(--eerie-black); }
+  .header-top-actions a:hover{
+    color: var(--davys-gray);
+  }
 
   .header-search-container { min-width: 300px; }
 
