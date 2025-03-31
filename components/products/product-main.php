@@ -595,7 +595,9 @@
                     </button>
 
                     <button class="btn-action">
-                        <ion-icon name="eye-outline"></ion-icon>
+                        <a href="./product-page.php?p_id=1234">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </a>
                     </button>
 
                     <button class="btn-action">

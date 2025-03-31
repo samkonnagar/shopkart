@@ -46,10 +46,6 @@
 
     <main>
 
-        <!---BANNER-->
-
-        <?php include_once './components/main/banner.php' ?>
-
         <!---CATEGORY-->
 
         <?php include_once './components/main/categories.php' ?>
@@ -66,64 +62,29 @@
 
                 <div class="product-box">
 
-                    <!---PRODUCT MINIMAL-->
-
-                    <?php include_once './components/products/product-minimal.php' ?>
-
                     <!---PRODUCT FEATURED-->
 
                     <?php include_once './components/products/product-featured.php' ?>
 
-                    <!--- PRODUCT GRID-->
-
-                    <?php include_once './components/products/product-main.php' ?>
-
                 </div>
 
             </div>
 
         </div>
 
-        <!---TESTIMONIALS, CTA & SERVICE-->
 
-        <div>
+        <!--- FOOTER-->
 
-            <div class="container">
+        <?php include_once './components/others/footer.php' ?>
 
-                <div class="testimonials-box">
+        <!--- custom js link-->
 
-                    <!---TESTIMONIALS-->
+        <script src="./assets/js/script.js"></script>
 
-                    <?php include_once './components/others/testimonial.php' ?>
+        <!-- ionicon link -->
 
-                    <!---CTA-->
-
-                    <?php include_once './components/others/cta.php' ?>
-
-                    <!--- SERVICE-->
-
-                    <?php include_once './components/others/service.php' ?>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </main>
-
-    <!--- FOOTER-->
-
-    <?php include_once './components/others/footer.php' ?>
-
-    <!--- custom js link-->
-
-    <script src="./assets/js/script.js"></script>
-
-    <!-- ionicon link -->
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

@@ -5,42 +5,42 @@
         <ul class="desktop-menu-category-list">
 
             <li class="menu-category">
-                <a href="#" class="menu-title">Home</a>
+                <a href="./" class="menu-title">Home</a>
             </li>
 
             <li class="menu-category">
-                <a href="#" class="menu-title">Categories</a>
+                <span class="menu-title">Categories</span>
 
                 <div class="dropdown-panel">
 
                     <ul class="dropdown-panel-list">
 
                         <li class="menu-title">
-                            <a href="#">Electronics</a>
+                            <a href="./category.php?category=electronics">Electronics</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Desktop</a>
+                            <a href="./category.php?category=desktop">Desktop</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Laptop</a>
+                            <a href="./category.php?category=laptop">Laptop</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Camera</a>
+                            <a href="./category.php?category=camera">Camera</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Tablet</a>
+                            <a href="./category.php?category=tablet">Tablet</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Headphone</a>
+                            <a href="./category.php?category=headphone">Headphone</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">
+                            <a href="./category.php?category=headphone">
                                 <img src="./assets/images/electronics-banner-1.jpg" alt="headphone collection" width="250"
                                     height="119">
                             </a>
@@ -51,31 +51,31 @@
                     <ul class="dropdown-panel-list">
 
                         <li class="menu-title">
-                            <a href="#">Men's</a>
+                            <a href="./category.php?category=electronics">Men's</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Formal</a>
+                            <a href="./category.php?category=electronics">Formal</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Casual</a>
+                            <a href="./category.php?category=electronics">Casual</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Sports</a>
+                            <a href="./category.php?category=electronics">Sports</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Jacket</a>
+                            <a href="./category.php?category=electronics">Jacket</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Sunglasses</a>
+                            <a href="./category.php?category=electronics">Sunglasses</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">
+                            <a href="./category.php?category=electronics">
                                 <img src="./assets/images/mens-banner.jpg" alt="men's fashion" width="250" height="119">
                             </a>
                         </li>
@@ -85,31 +85,31 @@
                     <ul class="dropdown-panel-list">
 
                         <li class="menu-title">
-                            <a href="#">Women's</a>
+                            <a href="./category.php?category=women's">Women's</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Formal</a>
+                            <a href="./category.php?category=electronics">Formal</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Casual</a>
+                            <a href="./category.php?category=electronics">Casual</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Perfume</a>
+                            <a href="./category.php?category=electronics">Perfume</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Cosmetics</a>
+                            <a href="./category.php?category=electronics">Cosmetics</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Bags</a>
+                            <a href="./category.php?category=electronics">Bags</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">
+                            <a href="./category.php?category=electronics">
                                 <img src="./assets/images/womens-banner.jpg" alt="women's fashion" width="250" height="119">
                             </a>
                         </li>
@@ -119,31 +119,31 @@
                     <ul class="dropdown-panel-list">
 
                         <li class="menu-title">
-                            <a href="#">Electronics</a>
+                            <a href="./category.php?category=electronics">Electronics</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Smart Watch</a>
+                            <a href="./category.php?category=electronics">Smart Watch</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Smart TV</a>
+                            <a href="./category.php?category=electronics">Smart TV</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Keyboard</a>
+                            <a href="./category.php?category=electronics">Keyboard</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Mouse</a>
+                            <a href="./category.php?category=electronics">Mouse</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">Microphone</a>
+                            <a href="./category.php?category=electronics">Microphone</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="#">
+                            <a href="./category.php?category=electronics">
                                 <img src="./assets/images/electronics-banner-2.jpg" alt="mouse collection" width="250" height="119">
                             </a>
                         </li>
@@ -159,19 +159,19 @@
                 <ul class="dropdown-list">
 
                     <li class="dropdown-item">
-                        <a href="#">Shirt</a>
+                        <a href="./category.php?category=electronics">Shirt</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Shorts & Jeans</a>
+                        <a href="./category.php?category=electronics">Shorts & Jeans</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Safety Shoes</a>
+                        <a href="./category.php?category=electronics">Safety Shoes</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Wallet</a>
+                        <a href="./category.php?category=electronics">Wallet</a>
                     </li>
 
                 </ul>
@@ -183,19 +183,19 @@
                 <ul class="dropdown-list">
 
                     <li class="dropdown-item">
-                        <a href="#">Dress & Frock</a>
+                        <a href="./category.php?category=electronics">Dress & Frock</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Earrings</a>
+                        <a href="./category.php?category=electronics">Earrings</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Necklace</a>
+                        <a href="./category.php?category=electronics">Necklace</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Makeup Kit</a>
+                        <a href="./category.php?category=electronics">Makeup Kit</a>
                     </li>
 
                 </ul>
@@ -207,19 +207,19 @@
                 <ul class="dropdown-list">
 
                     <li class="dropdown-item">
-                        <a href="#">Earrings</a>
+                        <a href="./category.php?category=electronics">Earrings</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Couple Rings</a>
+                        <a href="./category.php?category=electronics">Couple Rings</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Necklace</a>
+                        <a href="./category.php?category=electronics">Necklace</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Bracelets</a>
+                        <a href="./category.php?category=electronics">Bracelets</a>
                     </li>
 
                 </ul>
@@ -231,30 +231,22 @@
                 <ul class="dropdown-list">
 
                     <li class="dropdown-item">
-                        <a href="#">Clothes Perfume</a>
+                        <a href="./category.php?category=electronics">Clothes Perfume</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Deodorant</a>
+                        <a href="./category.php?category=electronics">Deodorant</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Flower Fragrance</a>
+                        <a href="./category.php?category=electronics">Flower Fragrance</a>
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="#">Air Freshener</a>
+                        <a href="./category.php?category=electronics">Air Freshener</a>
                     </li>
 
                 </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">Blog</a>
-            </li>
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">Hot Offers</a>
             </li>
 
         </ul>

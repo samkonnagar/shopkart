@@ -11,7 +11,9 @@
             <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
 
             <button class="search-btn">
-                <ion-icon name="search-outline"></ion-icon>
+                <a href="./search.php?q=mobile">
+                    <ion-icon name="search-outline"></ion-icon>
+                </a>
             </button>
 
         </div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopkart - Home</title>
+    <title>Shopkart - Category</title>
 
     <!---favicon-->
 
@@ -46,13 +46,6 @@
 
     <main>
 
-        <!---BANNER-->
-
-        <?php include_once './components/main/banner.php' ?>
-
-        <!---CATEGORY-->
-
-        <?php include_once './components/main/categories.php' ?>
 
         <!---PRODUCT-->
 
@@ -66,13 +59,6 @@
 
                 <div class="product-box">
 
-                    <!---PRODUCT MINIMAL-->
-
-                    <?php include_once './components/products/product-minimal.php' ?>
-
-                    <!---PRODUCT FEATURED-->
-
-                    <?php include_once './components/products/product-featured.php' ?>
 
                     <!--- PRODUCT GRID-->
 
@@ -84,31 +70,6 @@
 
         </div>
 
-        <!---TESTIMONIALS, CTA & SERVICE-->
-
-        <div>
-
-            <div class="container">
-
-                <div class="testimonials-box">
-
-                    <!---TESTIMONIALS-->
-
-                    <?php include_once './components/others/testimonial.php' ?>
-
-                    <!---CTA-->
-
-                    <?php include_once './components/others/cta.php' ?>
-
-                    <!--- SERVICE-->
-
-                    <?php include_once './components/others/service.php' ?>
-
-                </div>
-
-            </div>
-
-        </div>
 
     </main>
 
