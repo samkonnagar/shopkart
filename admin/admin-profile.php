@@ -1,3 +1,14 @@
+<?php
+session_start();
+require_once '../utils/auth.php';
+require_once '../utils/message.php';
+
+if(!authenticateAdmin()){
+  setMessage('./', "error", "Not Authorized");
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +54,7 @@
       <h2>Actions</h2>
       <button onclick="enableEdit()" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Edit Profile</button>
       <button onclick="saveProfile()" style="background-color: #008CBA; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Save</button>
-      <button onclick="window.location.href='index.html'" style="background-color: #f44336; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Logout</button>
+      <button onclick="window.location.href='logout.php'" style="background-color: #f44336; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Logout</button>
     </section>
     
   </main>

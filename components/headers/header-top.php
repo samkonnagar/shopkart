@@ -39,9 +39,21 @@
 
         <div class="header-top-actions">
 
-            <a href="login.php">Login</a>
-            <a href="signup.php">Signup</a>
-
+            <?php
+            require_once __DIR__."/../../utils/auth.php";
+            if (authenticateAdmin()) {
+            ?>
+                <a href="./admin/dashboard.php">Admin dashboard</a>
+            <?php
+            } elseif (authenticate()) {
+                echo "USER";
+            } else {
+            ?>
+                <a href="login.php">Login</a>
+                <a href="signup.php">Signup</a>
+            <?php
+            }
+            ?>
         </div>
 
     </div>

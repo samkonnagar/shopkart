@@ -10,14 +10,19 @@
 
   <body>
     <!-- Header -->
-    <?php include_once './components/headers/top-header.php' ?>
+    <?php 
+    session_start();
+    include_once '../utils/message.php';
+    getMessage();
+    include_once './components/headers/top-header.php'
+     ?>
 
     <!-- Login Form -->
     <main>
       <section class="login-container">
         <h1>Login</h1>
-        <form id="login-form">
-          <label for="username">Username/Email/Mobile No:</label>
+        <form id="login-form" action="./admin-handlers/handle.login.php" method="post">
+          <label for="username">Username/Email:</label>
           <input type="text" id="username" name="username" required />
 
           <label for="password">Password:</label>
@@ -28,7 +33,6 @@
             Logging in...
           </p>
         </form>
-
         <p id="login-message" class="login-message"></p>
       </section>
     </main>

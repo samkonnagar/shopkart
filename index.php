@@ -25,6 +25,11 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+    include_once './utils/message.php';
+    getMessage();
+    ?>
     <div class="overlay" data-overlay></div>
 
     <!---NOTIFICATION TOAST-->
