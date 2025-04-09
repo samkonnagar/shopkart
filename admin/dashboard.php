@@ -17,12 +17,15 @@ if(!authenticateAdmin()){
     <title>Dashboard</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/popup.css">
     <!-- Link dashboard-specific styles -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
     <?php 
+    include_once '../utils/message.php';
+    getMessage();
     include_once './components/headers/top-header.php';
     include_once './components/headers/navbar.php';
      ?>

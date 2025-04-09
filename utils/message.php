@@ -16,7 +16,7 @@ function getMessage()
         # code...
         $message =  $_SESSION['message'];
         $type = $_SESSION['type'];
-        echo "$type - $message";
+        echo "<div class='popup-msg $type'><span>$type - </span>$message</div>";
         unset($_SESSION['message']);
         unset($_SESSION['type']);
     }

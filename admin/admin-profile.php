@@ -7,6 +7,25 @@ if(!authenticateAdmin()){
   setMessage('./', "error", "Not Authorized");
 }
 
+require_once '../config/connection.php';
+
+$admin_id = $_SESSION['user_id'];
+$role = "admin";
+
+$sql = "SELECT * FROM `users` WHERE `user_id`='$admin_id' and `role`='$role'";
+
+try {
+  $res = mysqli_query($conn, $sql);
+  $no = mysqli_num_rows($res);
+  if ($no !== 1) {
+    setMessage('./', "error", "Not Authorized");
+  }
+  $data = mysqli_fetch_assoc($res);
+} catch (\Throwable $th) {
+  header('location: ../errors/500.php');
+  exit();
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -37,15 +56,11 @@ if(!authenticateAdmin()){
       </div>
       <div class="profile-info">
         <h2>
-          <span id="adminName">Saurabh Kumar</span> <span class="verified-badge">✔</span>
+          <span id="adminName"><?php echo $data['full_name']; ?></span> <span class="verified-badge">✔</span>
         </h2>
         <p id="adminRole">Admin</p>
         <div class="contact-details">
-          <p><strong>Email:</strong> <span id="adminEmail">contact@gu-saurabh.tech</span></p>
-          <p><strong>Phone:</strong> <span id="adminPhone">+91 9798024301</span></p>
-        </div>
-        <div class="address">
-          <p><strong>Address:</strong> <span id="adminAddress">Sector 16, Noida, 201301, INDIA </span></p>
+          <p><strong>Email:</strong> <span id="adminEmail"><?php echo $data['email']; ?></span></p>
         </div>
 
       </div>

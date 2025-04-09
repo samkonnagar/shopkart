@@ -2,9 +2,10 @@
 session_start();
 require_once '../utils/auth.php';
 require_once '../utils/message.php';
+require_once '../config/connection.php';
 
-if(!authenticateAdmin()){
-  setMessage('../', "error", "Not Authorized");
+if (!authenticateAdmin()) {
+    setMessage('../', "error", "Not Authorized");
 }
 
 ?>
@@ -25,33 +26,50 @@ if(!authenticateAdmin()){
     include_once './components/headers/navbar.php';
     ?>
     <h1>Add Products</h1>
-    <form id="productForm">
+    <form id="productForm" action="./admin-handlers/handle.product.php" method="post" enctype="multipart/form-data">
         <label for="productName">Product Name:</label>
         <input type="text" id="productName" name="productName" required>
 
-        <label for="productBrand">Brand:</label>
-        <input type="text" id="productBrand" name="productBrand" required>
+        <label for="price">Price per unit:</label>
+        <input type="number" id="price" name="price" required>
 
-        <label for="productPrice">Price:</label>
-        <input type="number" id="productPrice" name="productPrice" required>
+        <label for="unit">Unit:</label>
+        <select id="unit">
+            <option value="piece">Piece</option>
+            <option value="kg">Kilogram </option>
+            <option value="g">Gram</option>
+            <option value="l">Liter</option>
+            <option value="ml">Milliliter</option>
+            <option value="meter">Meter</option>
+            <option value="square meter">Square Meter</option>
+            <option value="dozen">Dozen</option>
+            <option value="pair">Pair</option>
+        </select>
 
-        <label for="productDiscountPrice">Discount Price:</label>
-        <input type="number" id="productDiscountPrice" name="productDiscountPrice">
+        <label for="total_unit">Total Unit:</label>
+        <input type="number" id="total_unit" name="total_unit">
 
-        <label for="productShippingCharges">Shipping Charges:</label>
-        <input type="number" id="productShippingCharges" name="productShippingCharges">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
 
-        <label for="productSpecifications">Specifications:</label>
-        <textarea id="productSpecifications" name="productSpecifications"></textarea>
-
-        <label for="productReturnPolicy">Return Policy:</label>
-        <textarea id="productReturnPolicy" name="productReturnPolicy"></textarea>
+        <label for="category">Category:</label>
+        <select id="category">
+        <?php
+            $sql = "SELECT `category_id`,`category_name` FROM `category`";
+            $res = mysqli_query($conn, $sql);
+            while ($data = mysqli_fetch_assoc($res)) {
+            ?>
+            <option value="<?php echo $data['category_id'] ?>"><?php echo $data['category_name'] ?></option>
+            <?php
+            }
+            ?>
+        </select>
 
         <label for="productImage">Product Image:</label>
-        <input type="file" id="productImage" name="productImage" accept="image/*">
+        <input type="file" id="productImage" name="productImage[]" multiple accept="image/*">
 
         <div class="button-row">
-            <button type="button" onclick="addProduct()" style="background-color: #5cb85c; color: white;">Add Product</button>
+            <button type="submit" style="background-color: #5cb85c; color: white;">Add Product</button>
         </div>
     </form>
     <h2>Product List</h2>

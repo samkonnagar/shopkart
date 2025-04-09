@@ -6,6 +6,7 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="../assets/css/popup.css">
   </head>
 
   <body>
