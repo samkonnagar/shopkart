@@ -29,9 +29,12 @@ if (!authenticateAdmin()) {
     include_once './components/headers/navbar.php';
     ?>
     <h1>Add New Category</h1>
-    <form id="productForm" action="./admin-handlers/handle.category.php" method="post">
+    <form id="productForm" action="./admin-handlers/handle.category.php" method="post" enctype="multipart/form-data">
         <label for="categoryName">Category Name:</label>
         <input type="text" id="categoryName" name="categoryName" required>
+
+        <label for="categoryImage">Category Image:</label>
+        <input type="file" id="categoryImage" name="categoryImage" required>
 
         <label for="description">Description:</label>
         <textarea id="description" name="description" required></textarea>
@@ -40,10 +43,11 @@ if (!authenticateAdmin()) {
             <button type="submit" style="background-color: #5cb85c; color: white;">Add Category</button>
         </div>
     </form>
-    <h2>Product List</h2>
+    <h2>Category List</h2>
     <table id="productTable">
         <thead>
             <tr>
+                <th>Category Image</th>
                 <th>Category Name</th>
                 <th>Description</th>
                 <th>Actions</th>
@@ -51,11 +55,14 @@ if (!authenticateAdmin()) {
         </thead>
         <tbody>
             <?php
-            $sql = "SELECT `category_name`, `description` FROM `category`";
+            $sql = "SELECT `category_name`, `image`, `description` FROM `category`";
             $res = mysqli_query($conn, $sql);
             while ($data = mysqli_fetch_assoc($res)) {
             ?>
             <tr>
+            <td>
+                <img src="../uploads/categories/<?php echo $data['image'] ?>" width="75" alt="">
+            </td>
                 <td><?php echo $data['category_name'] ?></td>
                 <td><?php echo $data['description'] ?></td>
                 <td>

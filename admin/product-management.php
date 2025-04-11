@@ -18,10 +18,13 @@ if (!authenticateAdmin()) {
     <title>Product Management</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/product-management.css"> <!-- Link styles -->
+    <link rel="stylesheet" href="../assets/css/popup.css">
 </head>
 
 <body>
     <?php
+    include_once '../utils/message.php';
+    getMessage();
     include_once './components/headers/top-header.php';
     include_once './components/headers/navbar.php';
     ?>
@@ -34,7 +37,7 @@ if (!authenticateAdmin()) {
         <input type="number" id="price" name="price" required>
 
         <label for="unit">Unit:</label>
-        <select id="unit">
+        <select id="unit" name="unit">
             <option value="piece">Piece</option>
             <option value="kg">Kilogram </option>
             <option value="g">Gram</option>
@@ -53,13 +56,13 @@ if (!authenticateAdmin()) {
         <textarea id="description" name="description"></textarea>
 
         <label for="category">Category:</label>
-        <select id="category">
-        <?php
+        <select id="category" name="category_id">
+            <?php
             $sql = "SELECT `category_id`,`category_name` FROM `category`";
             $res = mysqli_query($conn, $sql);
             while ($data = mysqli_fetch_assoc($res)) {
             ?>
-            <option value="<?php echo $data['category_id'] ?>"><?php echo $data['category_name'] ?></option>
+                <option value="<?php echo $data['category_id'] ?>"><?php echo $data['category_name'] ?></option>
             <?php
             }
             ?>
@@ -76,158 +79,35 @@ if (!authenticateAdmin()) {
     <table id="productTable">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Brand</th>
+                <th>Product Name</th>
                 <th>Price</th>
-                <th>Discount Price</th>
-                <th>Shipping Charges</th>
-                <th>Specifications</th>
-                <th>Return Policy</th>
+                <th>Stocks Avaliable</th>
+                <th>Description</th>
                 <th>Image</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>iPhone 14</td>
-                <td>Apple</td>
-                <td>999</td>
-                <td>899</td>
-                <td>20</td>
-                <td>128GB, A15 Bionic Chip</td>
-                <td>Return within 14 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Galaxy S23</td>
-                <td>Samsung</td>
-                <td>799</td>
-                <td>749</td>
-                <td>15</td>
-                <td>256GB, Snapdragon 8 Gen 2</td>
-                <td>Return within 30 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Pixel 7</td>
-                <td>Google</td>
-                <td>599</td>
-                <td>549</td>
-                <td>10</td>
-                <td>128GB, Google Tensor G2</td>
-                <td>Return within 15 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Xperia 1 IV</td>
-                <td>Sony</td>
-                <td>1199</td>
-                <td>1099</td>
-                <td>25</td>
-                <td>256GB, 4K OLED Display</td>
-                <td>Return within 10 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>OnePlus 11</td>
-                <td>OnePlus</td>
-                <td>699</td>
-                <td>649</td>
-                <td>20</td>
-                <td>256GB, Snapdragon 8 Gen 2</td>
-                <td>Return within 7 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Redmi Note 12</td>
-                <td>Xiaomi</td>
-                <td>299</td>
-                <td>279</td>
-                <td>10</td>
-                <td>128GB, AMOLED Display</td>
-                <td>Return within 14 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Find X5 Pro</td>
-                <td>Oppo</td>
-                <td>999</td>
-                <td>949</td>
-                <td>20</td>
-                <td>256GB, Hasselblad Camera</td>
-                <td>Return within 30 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Vivo X90</td>
-                <td>Vivo</td>
-                <td>799</td>
-                <td>749</td>
-                <td>15</td>
-                <td>256GB, Zeiss Optics</td>
-                <td>Return within 20 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Realme GT 3</td>
-                <td>Realme</td>
-                <td>499</td>
-                <td>469</td>
-                <td>10</td>
-                <td>128GB, 240W Charging</td>
-                <td>Return within 7 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Razor Phone 2</td>
-                <td>Razer</td>
-                <td>699</td>
-                <td>649</td>
-                <td>15</td>
-                <td>64GB, 120Hz Display</td>
-                <td>Return within 10 days</td>
-                <td><img src="black.png" alt="Product Image" style="width: 50px; height: 50px;"></td>
-                <td>
-                    <button onclick="deleteProduct(this)" style="background-color: #d9534f; color: white;">Delete</button>
-                    <button onclick="updateProduct(this)" style="background-color: #5bc0de; color: white;">Update</button>
-                </td>
-            </tr>
+            <?php
+            $sql = "SELECT `product_id`, `product_name`, `images`, `description`, `price_per_unit`, `unit`, `total_unit` FROM `products`";
+            $res = mysqli_query($conn, $sql);
+            while ($data = mysqli_fetch_assoc($res)) {
+                $image = json_decode($data['images'])[0];
+            ?>
+                <tr>
+                    <td><?php echo $data['product_name']; ?></td>
+                    <td><?php echo $data['price_per_unit']; ?></td>
+                    <td><?php echo $data['total_unit']. " ". $data['unit']; ?></td>
+                    <td><?php echo $data['description']; ?></td>
+                    <td><img src="../uploads/<?php echo $image; ?>" alt="Product Image" style="width: 75px;"></td>
+                    <td>
+                        <button style="background-color: #d9534f; color: white;">Delete</button>
+                        <button style="background-color: #5bc0de; color: white;">Update</button>
+                    </td>
+                </tr>
+            <?php
+            }
+            ?>
         </tbody>
     </table>
 

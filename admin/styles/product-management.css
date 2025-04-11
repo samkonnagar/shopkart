@@ -79,12 +79,6 @@ table tbody tr:hover {
     background-color: #f5f5f5;
 }
 
-table img {
-    max-width: 50px;
-    max-height: 50px;
-    object-fit: cover;
-}
-
 button {
     padding: 5px 10px;
     border: none;
