@@ -153,102 +153,6 @@
                 </div>
             </li>
 
-            <li class="menu-category">
-                <a href="#" class="menu-title">Men's</a>
-
-                <ul class="dropdown-list">
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Shirt</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Shorts & Jeans</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Safety Shoes</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Wallet</a>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">Women's</a>
-
-                <ul class="dropdown-list">
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Dress & Frock</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Earrings</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Necklace</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Makeup Kit</a>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">Jewelry</a>
-
-                <ul class="dropdown-list">
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Earrings</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Couple Rings</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Necklace</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Bracelets</a>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">Perfume</a>
-
-                <ul class="dropdown-list">
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Clothes Perfume</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Deodorant</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Flower Fragrance</a>
-                    </li>
-
-                    <li class="dropdown-item">
-                        <a href="./category.php?category=electronics">Air Freshener</a>
-                    </li>
-
-                </ul>
-            </li>
-
         </ul>
 
     </div>
@@ -431,64 +335,9 @@
 
         </li>
 
-        <li class="menu-category">
-            <a href="#" class="menu-title">Blog</a>
-        </li>
-
-        <li class="menu-category">
-            <a href="#" class="menu-title">Hot Offers</a>
-        </li>
-
     </ul>
 
     <div class="menu-bottom">
-
-        <ul class="menu-category-list">
-
-            <li class="menu-category">
-
-                <button class="accordion-menu" data-accordion-btn>
-                    <p class="menu-title">Language</p>
-
-                    <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-                </button>
-
-                <ul class="submenu-category-list" data-accordion>
-
-                    <li class="submenu-category">
-                        <a href="#" class="submenu-title">English</a>
-                    </li>
-
-                    <li class="submenu-category">
-                        <a href="#" class="submenu-title">Espa&ntilde;ol</a>
-                    </li>
-
-                    <li class="submenu-category">
-                        <a href="#" class="submenu-title">Fren&ccedil;h</a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-            <li class="menu-category">
-                <button class="accordion-menu" data-accordion-btn>
-                    <p class="menu-title">Currency</p>
-                    <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-                </button>
-
-                <ul class="submenu-category-list" data-accordion>
-                    <li class="submenu-category">
-                        <a href="#" class="submenu-title">USD &dollar;</a>
-                    </li>
-
-                    <li class="submenu-category">
-                        <a href="#" class="submenu-title">EUR &euro;</a>
-                    </li>
-                </ul>
-            </li>
-
-        </ul>
 
         <ul class="menu-social-container">
 

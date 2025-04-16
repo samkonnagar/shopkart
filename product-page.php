@@ -1,3 +1,6 @@
+<?php 
+require_once './config/connection.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 

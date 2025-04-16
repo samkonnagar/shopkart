@@ -1264,6 +1264,9 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 }
 
 .product-minimal .showcase:not(:last-child) { margin-bottom: 15px; }
+.product-minimal .showcase img{
+  object-fit: contain;
+}
 
 .product-minimal .showcase-content { width: -webkit-calc(100% - 85px); width: calc(100% - 85px); }
 
