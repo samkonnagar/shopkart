@@ -20,27 +20,27 @@
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=desktop">Desktop</a>
+                            <a href="./category.php?category=electronics&sub_cat=desktop">Desktop</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=laptop">Laptop</a>
+                            <a href="./category.php?category=electronics&sub_cat=laptop">Laptop</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=camera">Camera</a>
+                            <a href="./category.php?category=electronics&sub_cat=camera">Camera</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=tablet">Tablet</a>
+                            <a href="./category.php?category=electronics&sub_cat=tablet">Tablet</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=headphone">Headphone</a>
+                            <a href="./category.php?category=electronics&sub_cat=headphone">Headphone</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=headphone">
+                            <a href="./category.php?category=electronics&sub_cat=headphone">
                                 <img src="./assets/images/electronics-banner-1.jpg" alt="headphone collection" width="250"
                                     height="119">
                             </a>
@@ -51,15 +51,15 @@
                     <ul class="dropdown-panel-list">
 
                         <li class="menu-title">
-                            <a href="./category.php?category=electronics">Men's</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=men">Men's</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Formal</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=formal">Formal</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Casual</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=casual">Casual</a>
                         </li>
 
                         <li class="panel-list-item">

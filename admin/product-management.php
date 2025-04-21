@@ -68,6 +68,9 @@ if (!authenticateAdmin()) {
             ?>
         </select>
 
+        <label for="tags">Tags:</label>
+        <input type="text" id="tags" name="tags" placeholder="Enter tags (comma separated)">
+
         <label for="productImage">Product Image:</label>
         <input type="file" id="productImage" name="productImage[]" multiple accept="image/*">
 

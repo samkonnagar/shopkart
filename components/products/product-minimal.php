@@ -14,7 +14,7 @@ $res = mysqli_query($conn, $sql);
 
             <div class="showcase-container">
                 <?php
-                $no = 1;
+                $no = 0;
                 while ($data = mysqli_fetch_assoc($res)) {
                     $images = json_decode($data['images']);
                     $price = $data['price_per_unit'];

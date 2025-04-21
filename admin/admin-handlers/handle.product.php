@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $total_unit = filterInput($_POST['total_unit']);
     $description = filterInput($_POST['description']);
     $category_id = filterInput($_POST['category_id']);
+    $tags = mysqli_real_escape_string($conn, $_POST['tags']);
 
     if (empty($productName) || empty($price) || empty($unit) || empty($total_unit) || empty($description) || empty($category_id)) {
         setMessage("../product-management.php", "warning", "All fields are required");
@@ -71,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $admin_id = $_SESSION['user_id'];
     $images = json_encode($filesNames);
 
-    $sql = "INSERT INTO `products`(`admin_id`, `product_name`, `images`, `description`, `price_per_unit`, `unit`, `total_unit`, `category_id`) VALUES ('$admin_id','$productName','$images','$description','$price','$unit','$total_unit','$category_id')";
+    $sql = "INSERT INTO `products`(`admin_id`, `product_name`, `images`, `description`, `price_per_unit`, `unit`, `total_unit`, `category_id`, `tags`) VALUES ('$admin_id','$productName','$images','$description','$price','$unit','$total_unit','$category_id', '$tags')";
     $res = mysqli_query($conn, $sql);
     if ($res) {
         setMessage("../product-management.php", "success", "Product Added Successfully");
