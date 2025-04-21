@@ -2,6 +2,7 @@
 session_start();
 require_once '../utils/auth.php';
 require_once '../utils/message.php';
+require_once '../config/connection.php';
 
 if(!authenticateAdmin()){
   setMessage('../', "error", "Not Authorized");
@@ -32,22 +33,57 @@ if(!authenticateAdmin()){
    
     <!-- Main Dashboard Content -->
     <main>
+
+      <?php
+        $sql1 = "SELECT count(*) as total_category FROM category";
+        $res1 = mysqli_query($conn,$sql1);
+
+        $data1 = mysqli_fetch_assoc($res1);
+      
+      ?>
       <section class="dashboard-overview">
         <div class="overview-card" style="background-color: #e74c3c">
-          <h3>12,141</h3>
-          <p>Visits</p>
+          <h3><?php echo $data1['total_category']; ?></h3>
+          <p>Total Categories</p>
         </div>
+
+        <?php
+             $sql2 = "SELECT count(*) as total_product FROM products";
+             $res2 = mysqli_query($conn,$sql2);
+     
+             $data2 = mysqli_fetch_assoc($res2);
+        
+        
+        ?>
         <div class="overview-card" style="background-color: #f1c40f">
-          <h3>96.41%</h3>
-          <p>Bounce Rate</p>
+          <h3><?php echo $data2['total_product']; ?></h3>
+          <p>Total Products</p>
         </div>
+        <?php
+             $sql3 = "SELECT count(*) as total_orders FROM orders";
+             $res3 = mysqli_query($conn,$sql3);
+     
+             $data3 = mysqli_fetch_assoc($res3);
+        
+        
+        ?>
+
         <div class="overview-card" style="background-color: #2ecc71">
-          <h3>74,876</h3>
-          <p>Pageviews</p>
+          <h3><?php echo $data3['total_orders']; ?></h3>
+          <p>Total Orders</p>
         </div>
+        <?php
+             $sql4 = "SELECT count(*) as total_customer FROM users WHERE role = 'user'";
+             $res4 = mysqli_query($conn,$sql4);
+     
+             $data4 = mysqli_fetch_assoc($res4);
+        
+        
+        ?>
+
         <div class="overview-card" style="background-color: #3498db">
-          <h3>76.43%</h3>
-          <p>Growth Rate</p>
+          <h3><?php echo $data4['total_customer']; ?></h3>
+          <p>Total Customers</p>
         </div>
       </section>
 
