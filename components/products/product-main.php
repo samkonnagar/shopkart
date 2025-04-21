@@ -7,10 +7,10 @@ if (isset($_GET['category'])) {
     $sql .= "WHERE c.category_name = '$cat'";
     if (isset($_GET['sub_cat'])) {
         $sub_cat = $_GET['sub_cat'];
-        $sql .= " AND FIND_IN_SET('$sub_cat', REPLACE(tags, ' ', ''))";
+        $sql .= " AND FIND_IN_SET('$sub_cat', REPLACE(tags, ', ', ','))";
         if (isset($_GET['sub_s_cat'])) {
             $sub_s_cat = $_GET['sub_s_cat'];
-            $sql .= " AND FIND_IN_SET('$sub_s_cat', REPLACE(tags, ' ', ''))";
+            $sql .= " AND FIND_IN_SET('$sub_s_cat', REPLACE(tags, ', ', ','))";
         }
     }
 } else {

@@ -63,19 +63,19 @@
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Sports</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=sports">Sports</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Jacket</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=jacket">Jacket</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Sunglasses</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=sunglasses">Sunglasses</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=jacket">
                                 <img src="./assets/images/mens-banner.jpg" alt="men's fashion" width="250" height="119">
                             </a>
                         </li>
@@ -85,31 +85,31 @@
                     <ul class="dropdown-panel-list">
 
                         <li class="menu-title">
-                            <a href="./category.php?category=women's">Women's</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=women">Women's</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Formal</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=formal">Formal</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Casual</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=casual">Casual</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Perfume</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=perfume">Perfume</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Cosmetics</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=cosmetics">Cosmetics</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Bags</a>
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=bags">Bags</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">
+                            <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=shart ">
                                 <img src="./assets/images/womens-banner.jpg" alt="women's fashion" width="250" height="119">
                             </a>
                         </li>
@@ -123,27 +123,27 @@
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Smart Watch</a>
+                            <a href="./category.php?category=Watch&sub_cat=smart watch">Smart Watch</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Smart TV</a>
+                            <a href="./category.php?category=electronics&sub_cat=smart tv">Smart TV</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Keyboard</a>
+                            <a href="./category.php?category=electronics&sub_cat=keyboard">Keyboard</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Mouse</a>
+                            <a href="./category.php?category=electronics&sub_cat=mouse">Mouse</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">Microphone</a>
+                            <a href="./category.php?category=electronics&sub_cat=microphone">Microphone</a>
                         </li>
 
                         <li class="panel-list-item">
-                            <a href="./category.php?category=electronics">
+                            <a href="./category.php?category=electronics&sub_cat=mouse">
                                 <img src="./assets/images/electronics-banner-2.jpg" alt="mouse collection" width="250" height="119">
                             </a>
                         </li>
@@ -217,19 +217,23 @@
             <ul class="submenu-category-list" data-accordion>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Shirt</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=shart" class="submenu-title">Shirt</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Shorts & Jeans</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=shorts" class="submenu-title">Shorts</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Safety Shoes</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=jeans" class="submenu-title">Jeans</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Wallet</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=shoes" class="submenu-title">Shoes</a>
+                </li>
+
+                <li class="submenu-category">
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=wallet" class="submenu-title">Wallet</a>
                 </li>
 
             </ul>
@@ -250,19 +254,19 @@
             <ul class="submenu-category-list" data-accordion>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Dress & Frock</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=frock" class="submenu-title">Dress & Frock</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Earrings</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=earrings" class="submenu-title">Earrings</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Necklace</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=necklace" class="submenu-title">Necklace</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Makeup Kit</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=women&sub_s_cat=makeup kit" class="submenu-title">Makeup Kit</a>
                 </li>
 
             </ul>
@@ -283,19 +287,19 @@
             <ul class="submenu-category-list" data-accordion>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Earrings</a>
+                    <a href="./category.php?category=Jewelry&sub_cat=earrings" class="submenu-title">Earrings</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Couple Rings</a>
+                    <a href="./category.php?category=Jewelry&sub_cat=couple rings" class="submenu-title">Couple Rings</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Necklace</a>
+                    <a href="./category.php?category=Jewelry&sub_cat=necklace" class="submenu-title">Necklace</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Bracelets</a>
+                    <a href="./category.php?category=Jewelry&sub_cat=bracelets" class="submenu-title">Bracelets</a>
                 </li>
 
             </ul>
@@ -316,19 +320,19 @@
             <ul class="submenu-category-list" data-accordion>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Clothes Perfume</a>
+                    <a href="./category.php?category=Perfume&sub_cat=clothes perfume" class="submenu-title">Clothes Perfume</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Deodorant</a>
+                    <a href="./category.php?category=Perfume&sub_cat=deodorant" class="submenu-title">Deodorant</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Flower Fragrance</a>
+                    <a href="./category.php?category=Perfume&sub_cat=flower fragrance" class="submenu-title">Flower Fragrance</a>
                 </li>
 
                 <li class="submenu-category">
-                    <a href="#" class="submenu-title">Air Freshener</a>
+                    <a href="./category.php?category=Perfume&sub_cat=air freshener" class="submenu-title">Air Freshener</a>
                 </li>
 
             </ul>
