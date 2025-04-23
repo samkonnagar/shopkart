@@ -217,7 +217,7 @@
             <ul class="submenu-category-list" data-accordion>
 
                 <li class="submenu-category">
-                    <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=shart" class="submenu-title">Shirt</a>
+                    <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=shirt" class="submenu-title">Shirt</a>
                 </li>
 
                 <li class="submenu-category">
@@ -229,7 +229,7 @@
                 </li>
 
                 <li class="submenu-category">
-                    <a href="./category.php?category=Fashion and Apparel&sub_cat=men&sub_s_cat=shoes" class="submenu-title">Shoes</a>
+                    <a href="./category.php?category=Footwear&sub_cat=men&sub_s_cat=shoes" class="submenu-title">Shoes</a>
                 </li>
 
                 <li class="submenu-category">

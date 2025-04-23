@@ -1,167 +1,117 @@
-<div class="product-featured">
+<?php
+$sql = "SELECT * FROM  products ";
 
-    <h2 class="title">Deal of the day</h2>
+if (isset($_GET['p_id'])) {
+    $id = $_GET['p_id'];
+    $sql .= "WHERE product_id = '$id'";
+} else {
+    // find trending product id
+    $sql .= "WHERE product_id = '5'";
+}
 
-    <div class="showcase-wrapper has-scrollbar">
+$res = mysqli_query($conn, $sql);
 
-        <div class="showcase-container">
+if (mysqli_num_rows($res)) {
+    $data = mysqli_fetch_assoc($res);
+    $images = json_decode($data['images']);
+    $price = $data['price_per_unit'];
+    $crossPrice = $price + ($price * (rand(0, 100) / 100))
+?>
+    <div class="product-featured">
 
-            <div class="showcase">
+        <h2 class="title">Deal of the day</h2>
 
-                <div class="showcase-banner">
-                    <img src="./assets/images/products/shampoo.jpg" alt="shampoo, conditioner & facewash packs" class="showcase-img">
-                </div>
+        <div class="showcase-wrapper has-scrollbar">
 
-                <div class="showcase-content">
+            <div class="showcase-container">
 
-                    <div class="showcase-rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star-outline"></ion-icon>
-                        <ion-icon name="star-outline"></ion-icon>
+                <div class="showcase">
+
+                    <div class="showcase-banner">
+                        <img src="./uploads/<?php echo $images[0];  ?>" alt="shampoo, conditioner & facewash packs" class="showcase-img showcase-main-img">
+                        <div class="sub-showcase-images">
+                            <?php
+                            foreach ($images as $value) {
+                                echo "<img src='./uploads/$value' class='showcase-sub-img' alt=''>";
+                            }
+
+                            ?>
+                        </div>
                     </div>
 
-                    <a href="#">
-                        <h3 class="showcase-title">shampoo, conditioner & facewash packs</h3>
-                    </a>
+                    <div class="showcase-content">
 
-                    <p class="showcase-desc">
-                        Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                        dolor dolor sit amet consectetur Lorem ipsum dolor
-                    </p>
-
-                    <div class="price-box">
-                        <p class="price">$150.00</p>
-
-                        <del>$200.00</del>
-                    </div>
-
-                    <button class="add-cart-btn">add to cart</button>
-
-                    <div class="showcase-status">
-                        <div class="wrapper">
-                            <p>
-                                already sold: <b>20</b>
-                            </p>
-
-                            <p>
-                                available: <b>40</b>
-                            </p>
+                        <div class="showcase-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
                         </div>
 
-                        <div class="showcase-status-bar"></div>
-                    </div>
+                        <a href="#">
+                            <h3 class="showcase-title full-title"><?php echo $data['product_name']; ?></h3>
+                        </a>
 
-                    <div class="countdown-box">
-
-                        <p class="countdown-desc">
-                            Hurry Up! Offer ends in:
+                        <p class="showcase-desc">
+                            <?php echo $data['description']; ?>
                         </p>
 
-                        <div class="countdown">
+                        <div class="price-box">
+                            <p class="price">₹<?php echo $price; ?></p>
 
-                            <div class="countdown-content">
-
-                                <p class="display-number">360</p>
-
-                                <p class="display-text">Days</p>
-
-                            </div>
-
-                            <div class="countdown-content">
-                                <p class="display-number">24</p>
-                                <p class="display-text">Hours</p>
-                            </div>
-
-                            <div class="countdown-content">
-                                <p class="display-number">59</p>
-                                <p class="display-text">Min</p>
-                            </div>
-
-                            <div class="countdown-content">
-                                <p class="display-number">00</p>
-                                <p class="display-text">Sec</p>
-                            </div>
-
+                            <del>₹<?php echo $crossPrice; ?></del>
                         </div>
 
-                    </div>
+                        <button class="add-cart-btn">add to cart</button>
 
-                </div>
+                        <div class="showcase-status">
+                            <div class="wrapper">
+                                <p>
+                                    already sold: <b>0</b>
+                                </p>
 
-            </div>
+                                <p>
+                                    available: <b><?php echo $data['total_unit']. " " . $data['unit']; ?></b>
+                                </p>
+                            </div>
 
-        </div>
-
-        <div class="showcase-container">
-
-            <div class="showcase">
-
-                <div class="showcase-banner">
-                    <img src="./assets/images/products/jewellery-1.jpg" alt="Rose Gold diamonds Earring" class="showcase-img">
-                </div>
-
-                <div class="showcase-content">
-
-                    <div class="showcase-rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star-outline"></ion-icon>
-                        <ion-icon name="star-outline"></ion-icon>
-                    </div>
-
-                    <h3 class="showcase-title">
-                        <a href="#" class="showcase-title">Rose Gold diamonds Earring</a>
-                    </h3>
-
-                    <p class="showcase-desc">
-                        Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                        dolor dolor sit amet consectetur Lorem ipsum dolor
-                    </p>
-
-                    <div class="price-box">
-                        <p class="price">$1990.00</p>
-                        <del>$2000.00</del>
-                    </div>
-
-                    <button class="add-cart-btn">add to cart</button>
-
-                    <div class="showcase-status">
-                        <div class="wrapper">
-                            <p> already sold: <b>15</b> </p>
-
-                            <p> available: <b>40</b> </p>
+                            <div class="showcase-status-bar"></div>
                         </div>
 
-                        <div class="showcase-status-bar"></div>
-                    </div>
+                        <div class="countdown-box">
 
-                    <div class="countdown-box">
+                            <p class="countdown-desc">
+                                Hurry Up! Offer ends in:
+                            </p>
 
-                        <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+                            <div class="countdown">
 
-                        <div class="countdown">
-                            <div class="countdown-content">
-                                <p class="display-number">360</p>
-                                <p class="display-text">Days</p>
+                                <div class="countdown-content">
+
+                                    <p class="display-number">360</p>
+
+                                    <p class="display-text">Days</p>
+
+                                </div>
+
+                                <div class="countdown-content">
+                                    <p class="display-number">24</p>
+                                    <p class="display-text">Hours</p>
+                                </div>
+
+                                <div class="countdown-content">
+                                    <p class="display-number">59</p>
+                                    <p class="display-text">Min</p>
+                                </div>
+
+                                <div class="countdown-content">
+                                    <p class="display-number">00</p>
+                                    <p class="display-text">Sec</p>
+                                </div>
+
                             </div>
 
-                            <div class="countdown-content">
-                                <p class="display-number">24</p>
-                                <p class="display-text">Hours</p>
-                            </div>
-
-                            <div class="countdown-content">
-                                <p class="display-number">59</p>
-                                <p class="display-text">Min</p>
-                            </div>
-
-                            <div class="countdown-content">
-                                <p class="display-number">00</p>
-                                <p class="display-text">Sec</p>
-                            </div>
                         </div>
 
                     </div>
@@ -174,4 +124,8 @@
 
     </div>
 
-</div>
+<?php
+} else {
+    echo "<h3>Invalid product Id</h3>";
+}
+?>

@@ -127,6 +127,7 @@ require_once './config/connection.php';
     <!--- custom js link-->
 
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/product.js"></script>
 
     <!-- ionicon link -->
 

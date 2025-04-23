@@ -1292,6 +1292,27 @@ body::-webkit-scrollbar-thumb:hover {
   #PRODUCT MINIMAL
 \*-----------------------------------*/
 
+.sub-showcase-images{
+  padding-top: .75rem;
+  display: flex;
+  gap: .5rem;
+  overflow-x: scroll;
+}
+.sub-showcase-images::-webkit-scrollbar{
+  opacity: 0;
+}
+.sub-showcase-images img{
+  height: 75px;
+  border: 1px dashed #616151;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+.showcase-main-img{
+  height: 500px;
+  object-fit: contain;
+}
+
 .product-minimal {
   margin-bottom: 30px;
 }
@@ -1439,9 +1460,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .product-featured .showcase-img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .product-featured .showcase-content {
@@ -1463,10 +1481,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .product-featured .showcase-title {
-  font-size: var(--fs-7);
+  font-size: var(--fs-5);
   color: var(--eerie-black);
   overflow: hidden;
-  white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   text-transform: uppercase;
