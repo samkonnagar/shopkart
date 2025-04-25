@@ -1,6 +1,6 @@
-<?php 
+<?php
 require_once './config/connection.php';
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,12 +31,9 @@ require_once './config/connection.php';
     <?php
     session_start();
     include_once './utils/message.php';
-    getMessage();
+    getMessageClient()
     ?>
     <div class="overlay" data-overlay></div>
-
-    <!---NOTIFICATION TOAST-->
-    <?php include_once './components/popups/notification.php'; ?>
 
     <!---HEADER-->
 

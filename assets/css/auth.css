@@ -6,6 +6,7 @@ body {
 
 a {
   text-decoration: none;
+  display: inline;
 }
 
 .container {
@@ -78,7 +79,7 @@ a {
   align-items: center;
 }
 
-button {
+.submit-btn {
   width: 200px;
   height: 40px;
   outline: none;
@@ -95,7 +96,7 @@ button {
   margin-top: 1rem;
 }
 
-button:active {
+.submit-btn:active {
   transform: scale(1.1);
 }
 
