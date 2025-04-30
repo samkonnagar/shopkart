@@ -31,6 +31,7 @@
             <button class="submit-btn" type="submit">Log In</button>
             <p class="conditions">Don't have an account? <a href="./signup.php">Sign Up</a></p>
 
+            <button class="submit-btn" id="g-login">Log In With Google</button>
         </form>
 
         <div class="text-container">
@@ -39,5 +40,12 @@
         </div>
     </div>
     <script src="./assets/js/script.js"></script>
+
+    <script>
+        document.getElementById('g-login').onclick = (e) =>{
+            e.preventDefault();
+            location.assign('./google-auth/google-login.php');
+        }
+    </script>
 </body>
 </html>
