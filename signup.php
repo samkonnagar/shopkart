@@ -21,7 +21,7 @@
 
             <div class="text">
                 <img src="https://i.postimg.cc/1zgS8WTF/user.png" alt="icon" height="20">
-                <input type="text" placeholder="Fullname" name="fullname">
+                <input type="text" placeholder="Fullname" name="fullname" id="fullname">
             </div>
 
             <div class="text">
@@ -31,7 +31,14 @@
 
             <div class="text">
                 <img src="https://i.postimg.cc/DZBPRgvC/email.png" alt="icon" height="12">
-                <input type="email" placeholder="Email" name="email">
+                <input type="email" placeholder="Email" name="email" id="email">
+            </div>
+
+            <button class="submit-btn" id="send-otp">Send OTP</button>
+
+            <div class="text" id="otp-box" style="display: none;">
+                <img src="https://i.postimg.cc/DZBPRgvC/email.png" alt="icon" height="12">
+                <input type="nunber" placeholder="OTP" name="otp" max="9999">
             </div>
 
             <div class="text">
@@ -56,6 +63,23 @@
     </div>
 
     <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('#send-otp').click(function(e){
+            e.preventDefault();
+            $('#otp-box').show()
+            const fullname = $('#fullname').val().trim()
+            const email = $('#email').val().trim()
+            if (!fullname || !email) {
+                alert("Enter fullname and email before send otp")
+                return;
+            }
+
+            $.post('utils/sendOtp.php', {mail: email, fullname: fullname}, (getdata) => {
+                alert(getdata);
+            })
+        })
+    </script>
 </body>
 
 </html>

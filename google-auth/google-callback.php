@@ -27,16 +27,31 @@ if (isset($_GET['code'])) {
         $sql = "SELECT * FROM `users` WHERE email = '$user->email'";
         $res = mysqli_query($conn, $sql);
         if (mysqli_num_rows($res) !== 1){
-            session_regenerate_id();
-            $_SESSION['user_id'] = $user->id;
-            $_SESSION['full_name'] = $user->name;
-            $_SESSION['user_email'] = $user->email;
-            $_SESSION['role'] = "user";
-            $_SESSION['user_picture'] = $user->picture;
-            $_SESSION['is_loggdin'] = true;
-            setMessage("../", "success", "Google login successfull");
+            $insertSql = "INSERT INTO `users`(`user_id`, `username`, `full_name`, `email`, `avatar`, `register_type`, `isActive`) VALUES ('$user->id','$user->email','$user->name','$user->email','$user->picture','google',TRUE)";
+            $inserRes = mysqli_query($conn, $insertSql);
+            if ($inserRes) {
+                session_regenerate_id();
+                $_SESSION['user_id'] = $user->id;
+                $_SESSION['full_name'] = $user->name;
+                $_SESSION['user_email'] = $user->email;
+                $_SESSION['role'] = "user";
+                $_SESSION['user_picture'] = $user->picture;
+                $_SESSION['is_loggdin'] = true;
+                setMessage("../", "success", "Google login successfull");
+            }
         } else {
-            setMessage("../login.php", "warning", "Email Already Registered");
+            if (mysqli_fetch_assoc($res)['register_type'] === 'google') {
+                session_regenerate_id();
+                $_SESSION['user_id'] = $user->id;
+                $_SESSION['full_name'] = $user->name;
+                $_SESSION['user_email'] = $user->email;
+                $_SESSION['role'] = "user";
+                $_SESSION['user_picture'] = $user->picture;
+                $_SESSION['is_loggdin'] = true;
+                setMessage("../", "success", "Google login successfull");
+            } else {
+                setMessage("../login.php", "warning", "Email Already Registered Use Normal Login");
+            }
         }
     } else {
         echo "Error fetching token: " . $token['error'];

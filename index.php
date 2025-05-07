@@ -31,7 +31,7 @@ require_once './config/connection.php';
     <?php
     session_start();
     include_once './utils/message.php';
-    getMessageClient()
+    getMessageClient();
     ?>
     <div class="overlay" data-overlay></div>
 
