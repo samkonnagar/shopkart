@@ -74,7 +74,13 @@
                 alert("Enter fullname and email before send otp")
                 return;
             }
-
+            
+            $('#send-otp').attr('disabled', '').hide()
+            setTimeout(()=>{
+                $('#send-otp').removeAttr('disabled').show()
+                $('#send-otp').text("Resend OTP")
+            }, 30000)
+            
             $.post('utils/sendOtp.php', {mail: email, fullname: fullname}, (getdata) => {
                 alert(getdata);
             })

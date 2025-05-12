@@ -10,18 +10,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = filterInput($_POST['email'], 'email');
     $password = filterInput($_POST['password']);
     $c_password = filterInput($_POST['c_password']);
+    $otp = filterInput($_POST['otp']);
 
     // Basic validation
     if (empty($fullname) || empty($username) || empty($email) || empty($password) || empty($c_password)) {
         setMessage("../signup.php", "warning", "All fields are required");
     }
+    if ($otp != $_SESSION['otp']) {
+        unset($_SESSION['otp']);
+        setMessage("../signup.php", "warning", "invalid OTP");
+    }
     if ($password !== $c_password) {
         setMessage("../signup.php", "warning", "Password do not match");
     }
     $hash = password_hash($password, PASSWORD_DEFAULT);
+    $user_id = uniqid().time();
 
     // Insert query
-    $sql = "INSERT INTO `users`(`username`, `full_name`, `email`, `password`, `isActive`) VALUES ('$username','$fullname','$email','$hash',TRUE)";
+    $sql = "INSERT INTO `users`(`user_id`,`username`, `full_name`, `email`, `password`, `isActive`) VALUES ('$user_id','$username','$fullname','$email','$hash',TRUE)";
     $res = mysqli_query($conn, $sql);
 
 
